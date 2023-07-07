@@ -1,0 +1,29 @@
+*[data-task="/"]:has(input[data-task="/"]:checked),
+li[data-task="/"]:has(> input:checked),
+li[data-task="/"]:has(> p > input:checked) {
+	background-color: var(--background-primary-alt);
+}
+
+*[data-task="x"]:has(input[data-task="x"]:checked),
+li[data-task="x"]:has(> input:checked),
+li[data-task="x"]:has(> p > input:checked) {
+	opacity: 50%;
+}
+
+*[data-task="-"]:has(input[data-task="-"]:checked),
+li[data-task="-"]:has(> input:checked),
+li[data-task="-"]:has(> p > input:checked) {
+	opacity: 25%;
+}
+
+*[data-task="!"]:has(input[data-task="!"]:checked),
+li[data-task="!"]:has(> input:checked),
+li[data-task="!"]:has(> p > input:checked) {
+	background-color: rgba(255, 0, 0, 0.2);
+}
+
+*[data-task="?"]:has(input[data-task="?"]:checked),
+li[data-task="?"]:has(> input:checked),
+li[data-task="?"]:has(> p > input:checked) {
+	background-color: rgb(247, 206, 70, 0.2);
+}

@@ -1,3 +1,11 @@
 {
-  "accentColor": ""
+  "theme": "moonstone",
+  "baseFontSize": 15,
+  "enabledCssSnippets": [
+    "minimaltheme-dataviewinlinefields",
+    "tasks"
+  ],
+  "cssTheme": "Minimal",
+  "accentColor": "",
+  "nativeMenus": true
 }

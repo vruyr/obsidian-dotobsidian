@@ -1,0 +1,89 @@
+/* https://github.com/kepano/obsidian-minimal */
+/* https://minimal.guide */
+
+body .dataview.inline-field {
+	--inline-field-color-weak: color-mix(in srgb, var(--text-muted) 20%, transparent);
+	--inline-field-color-strong: color-mix(in srgb, var(--text-muted) 70%, transparent);
+	/* --inline-field-color-strong: var(--text-muted); */
+	--inline-field-padding: 2px;
+	--inline-field-box-radius: 4px;
+	--inline-field-opacity-key: 1;
+	--inline-field-opacity-val: 1;
+	--inline-field-border-key: 1px var(--inline-field-color-weak) solid;
+	--inline-field-border-val: 1px var(--inline-field-color-weak) dashed;
+
+	white-space: nowrap;
+}
+
+body .dataview.inline-field-key {
+	border: var(--inline-field-border-key);
+	border-top-left-radius: var(--inline-field-box-radius);
+	border-bottom-left-radius: var(--inline-field-box-radius);
+	padding: var(--inline-field-padding);
+	opacity: var(--inline-field-opacity-key);
+	background-color: var(--background-primary);
+	color: var(--inline-field-color-strong);
+}
+
+body .dataview.inline-field-key::after {
+	margin-left: 0;
+	content: "";
+}
+
+body .dataview.inline-field-value {
+	border-top: var(--inline-field-border-val);
+	border-right: var(--inline-field-border-val);
+	border-bottom: var(--inline-field-border-val);
+	border-top-right-radius: var(--inline-field-box-radius);
+	border-bottom-right-radius: var(--inline-field-box-radius);
+	padding: var(--inline-field-padding);
+	opacity: var(--inline-field-opacity-val);
+	background-color: var(--background-primary);
+	color: var(--inline-field-color-strong);
+}
+
+/* Render inline fields from new line */
+
+/* TODO This doesn't work properly if the inline field appears in the middle of text.
+ * 1. Inline fields in the beginning and middle should be rendered inline.
+ * 2. Inline fields at the end should be rendered from new line.
+ *
+ * Test case:
+ * - [due::2023-07-02] First part [defer::2023-07-02] second part [added::2023-07-01T09:35:38-04:00] [done::2023-07-01T09:35:40-04:00]
+ * Must be rendered as:
+ * - [due::2023-07-02] First part [defer::2023-07-02] second part
+ *   [added::2023-07-01T09:35:38-04:00] [done::2023-07-01T09:35:40-04:00]
+ *
+ * Test case:
+ * - First part [defer::2023-07-02] second part [added::2023-07-01T09:35:38-04:00] [done::2023-07-01T09:35:40-04:00]
+ * Must be rendered as:
+ * - First part [defer::2023-07-02] second part
+ *   [added::2023-07-01T09:35:38-04:00] [done::2023-07-01T09:35:40-04:00]
+ *
+ *
+ * CSS doesn't allow selecting text nodes and adjacent sibling combinator [^1] just ignores text [^2].
+ *
+ * [^1]: https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator
+ * [^2]: https://stackoverflow.com/questions/49033635/adjacent-css-selector-with-plain-text-in-between-still-matching
+ *
+ * Best workaround than is to Move everything starting from the first inline field to a new line.
+ */
+
+/* All inline fields immediately following a non inline field element */
+body *:has(> .dataview.inline-field) > :not(.dataview.inline-field) + .dataview.inline-field::before {
+	content: "";
+	display: block;
+}
+
+/* Sole inline field or first inline field among siblings */
+body .dataview.inline-field:only-child::before,
+body .dataview.inline-field:has(+ .dataview.inline-field):first-child::before {
+	content: "";
+	display: block;
+}
+
+/* First inline field among siblings that is followed by a non inline field. This is for negation. */
+body .dataview.inline-field:has(+ .dataview.inline-field):first-child:has(~ :not(.dataview.inline-field))::before {
+	content: "";
+	display: initial;
+}

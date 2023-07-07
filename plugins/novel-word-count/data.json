@@ -1,0 +1,19 @@
+{
+	"settings": {
+		"abbreviateDescriptions": true,
+		"alignment": "right",
+		"charsPerPage": 1500,
+		"charsPerPageIncludesWhitespace": false,
+		"countType": "word",
+		"countType2": "none",
+		"countType3": "none",
+		"debugMode": false,
+		"folderCountType": "note",
+		"folderCountType2": "word",
+		"folderCountType3": "none",
+		"pageCountType": "ByWords",
+		"showSameCountsOnFolders": false,
+		"wordCountType": "SpaceDelimited",
+		"wordsPerPage": 300
+	}
+}
