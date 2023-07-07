@@ -229,5 +229,14 @@
       ],
       "key": "I"
     }
+  ],
+  "templater-obsidian:Templates/Log Entry.md": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "L"
+    }
   ]
 }
