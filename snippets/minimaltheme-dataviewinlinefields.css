@@ -7,20 +7,20 @@ body .dataview.inline-field {
 	/* --inline-field-color-strong: var(--text-muted); */
 	--inline-field-padding: 2px;
 	--inline-field-box-radius: 4px;
-	--inline-field-opacity-key: 1;
-	--inline-field-opacity-val: 1;
-	--inline-field-border-key: 1px var(--inline-field-color-weak) solid;
-	--inline-field-border-val: 1px var(--inline-field-color-weak) dashed;
+	--inline-field-opacity-major: 1;
+	--inline-field-opacity-minor: 1;
+	--inline-field-border-major: 1px var(--inline-field-color-weak) solid;
+	--inline-field-border-minor: 1px var(--inline-field-color-weak) dashed;
 
 	white-space: nowrap;
 }
 
 body .dataview.inline-field-key {
-	border: var(--inline-field-border-key);
+	border: var(--inline-field-border-major);
 	border-top-left-radius: var(--inline-field-box-radius);
 	border-bottom-left-radius: var(--inline-field-box-radius);
 	padding: var(--inline-field-padding);
-	opacity: var(--inline-field-opacity-key);
+	opacity: var(--inline-field-opacity-major);
 	background-color: var(--background-primary);
 	color: var(--inline-field-color-strong);
 }
@@ -31,13 +31,23 @@ body .dataview.inline-field-key::after {
 }
 
 body .dataview.inline-field-value {
-	border-top: var(--inline-field-border-val);
-	border-right: var(--inline-field-border-val);
-	border-bottom: var(--inline-field-border-val);
+	border-top: var(--inline-field-border-minor);
+	border-right: var(--inline-field-border-minor);
+	border-bottom: var(--inline-field-border-minor);
 	border-top-right-radius: var(--inline-field-box-radius);
 	border-bottom-right-radius: var(--inline-field-box-radius);
 	padding: var(--inline-field-padding);
-	opacity: var(--inline-field-opacity-val);
+	opacity: var(--inline-field-opacity-minor);
+	background-color: var(--background-primary);
+	color: var(--inline-field-color-strong);
+}
+
+body .dataview.inline-field-standalone-value {
+	border: var(--inline-field-border-major);
+	border-radius: var(--inline-field-box-radius);
+	border-radius: var(--inline-field-box-radius);
+	padding: var(--inline-field-padding);
+	opacity: var(--inline-field-opacity-major);
 	background-color: var(--background-primary);
 	color: var(--inline-field-color-strong);
 }
