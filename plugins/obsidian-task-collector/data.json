@@ -1,0 +1,56 @@
+{
+  "groups": {
+    "default": {
+      "name": "default",
+      "marks": " ",
+      "complete": false,
+      "removeExpr": "\\[(started|done|dropped)::[-\\dT:]+\\]",
+      "appendDateFormat": "",
+      "registerCommand": false,
+      "useContextMenu": false
+    },
+    "started": {
+      "name": "started",
+      "marks": "/",
+      "complete": false,
+      "removeExpr": "",
+      "appendDateFormat": "[[started::]YYYY-MM-DD[T]HH:mm:ssZ[]]",
+      "registerCommand": false,
+      "useContextMenu": false
+    },
+    "done": {
+      "name": "done",
+      "marks": "x",
+      "complete": true,
+      "removeExpr": "",
+      "appendDateFormat": "[[done::]YYYY-MM-DD[T]HH:mm:ssZ[]]",
+      "registerCommand": false,
+      "useContextMenu": false
+    },
+    "dropped": {
+      "name": "dropped",
+      "marks": "-",
+      "complete": true,
+      "removeExpr": "",
+      "appendDateFormat": "[[dropped::]YYYY-MM-DD[T]HH:mm:ssZ[]]",
+      "registerCommand": false,
+      "useContextMenu": false
+    }
+  },
+  "markCycle": "/x",
+  "collectionEnabled": false,
+  "previewClickModal": true,
+  "contextMenu": {
+    "markTask": false,
+    "resetTask": false,
+    "resetAllTasks": true,
+    "collectTasks": false
+  },
+  "debug": false,
+  "convertEmptyLines": false,
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 11
+  }
+}

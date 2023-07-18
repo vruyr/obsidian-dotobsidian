@@ -238,5 +238,32 @@
       ],
       "key": "L"
     }
+  ],
+  "obsidian-task-collector:task-collector-mark": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
+    }
+  ],
+  "obsidian-task-collector:task-collector-mark-next": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "M"
+    }
+  ],
+  "obsidian-task-collector:task-collector-mark-prev": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod",
+        "Shift"
+      ],
+      "key": "M"
+    }
   ]
 }
