@@ -4,8 +4,8 @@
       "name": "default",
       "marks": " ",
       "complete": false,
-      "removeExpr": "\\[(started|done|dropped)::[-\\dT:]+\\]",
-      "appendDateFormat": "",
+      "removeExpr": "\\[\\s*(done|dropped)\\s*::\\s*[-\\dT:]+\\]",
+      "appendDateFormat": "[[stopped::]YYYY-MM-DD[T]HH:mm:ssZ[]]",
       "registerCommand": false,
       "useContextMenu": false
     },
