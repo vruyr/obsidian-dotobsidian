@@ -9,7 +9,7 @@
   "refreshEnabled": true,
   "refreshInterval": 2500,
   "defaultDateFormat": "EEE M/d/yy",
-  "defaultDateTimeFormat": "EEE M/d/yy T",
+  "defaultDateTimeFormat": "EEE MM/dd/yy T",
   "maxRecursiveRenderDepth": 4,
   "tableIdColumnName": "File",
   "tableGroupColumnName": "Group",
