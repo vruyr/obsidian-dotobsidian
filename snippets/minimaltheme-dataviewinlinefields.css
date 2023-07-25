@@ -52,6 +52,22 @@ body .dataview.inline-field-standalone-value {
 	color: var(--inline-field-color-strong);
 }
 
+.dataview-inline-field-key-monospace .dataview.inline-field-key {
+	font-family: var(--font-monospace);
+	font-size: 75%;
+}
+
+.dataview-inline-field-value-monospace .dataview.inline-field-value {
+	font-family: var(--font-monospace);
+	font-size: 75%;
+}
+
+.dataview-inline-field-standalone-monospace .dataview.inline-field-standalone-value {
+	font-family: var(--font-monospace);
+	font-size: 75%;
+}
+
+
 /* Render inline fields from new line */
 
 /* TODO This doesn't work properly if the inline field appears in the middle of text.
