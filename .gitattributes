@@ -1,3 +1,6 @@
+# git config filter.appearance.clean 'jq --tab --sort-keys '\''setpath(["theme"]; "system")'\'
+# git config filter.appearance.smudge cat
+appearance.json filter=appearance
 # git config filter.novelwordcount.clean 'jq --tab --sort-keys '\''delpaths([["cachedCounts"]])'\'
 # git config filter.novelwordcount.smudge cat
 plugins/novel-word-count/data.json filter=novelwordcount
