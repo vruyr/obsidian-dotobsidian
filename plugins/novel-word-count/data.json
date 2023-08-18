@@ -8,6 +8,7 @@
 		"countType2": "none",
 		"countType3": "none",
 		"debugMode": false,
+		"excludeComments": false,
 		"folderCountType": "note",
 		"folderCountType2": "word",
 		"folderCountType3": "none",
