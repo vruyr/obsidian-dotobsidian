@@ -96,20 +96,27 @@ body .dataview.inline-field-standalone-value {
  */
 
 /* All inline fields immediately following a non inline field element */
+/*
 body *:has(> .dataview.inline-field) > :not(.dataview.inline-field) + .dataview.inline-field::before {
 	content: "";
 	display: block;
 }
+*/
+/* TODO: Exclude <span class="dataview inline-field-standalone-value"/> */
 
 /* Sole inline field or first inline field among siblings */
+/*
 body .dataview.inline-field:only-child::before,
 body .dataview.inline-field:has(+ .dataview.inline-field):first-child::before {
 	content: "";
 	display: block;
 }
+*/
 
 /* First inline field among siblings that is followed by a non inline field. This is for negation. */
+/*
 body .dataview.inline-field:has(+ .dataview.inline-field):first-child:has(~ :not(.dataview.inline-field))::before {
 	content: "";
 	display: initial;
 }
+*/
