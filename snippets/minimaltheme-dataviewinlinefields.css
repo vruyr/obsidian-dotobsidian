@@ -43,7 +43,7 @@ body .dataview.inline-field-value {
 }
 
 body .dataview.inline-field-standalone-value {
-	border: var(--inline-field-border-major);
+	border: var(--inline-field-border-minor);
 	border-radius: var(--inline-field-box-radius);
 	border-radius: var(--inline-field-box-radius);
 	padding: var(--inline-field-padding);
