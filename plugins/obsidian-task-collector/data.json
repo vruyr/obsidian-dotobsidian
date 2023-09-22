@@ -43,7 +43,7 @@
   "contextMenu": {
     "markTask": false,
     "resetTask": false,
-    "resetAllTasks": true,
+    "resetAllTasks": false,
     "collectTasks": false
   },
   "debug": false,
