@@ -2,6 +2,8 @@
 	"settings": {
 		"abbreviateDescriptions": true,
 		"alignment": "right",
+		"characterCountType": "AllCharacters",
+		"charsPerMinute": 500,
 		"charsPerPage": 1500,
 		"charsPerPageIncludesWhitespace": false,
 		"countType": "word",
@@ -15,6 +17,7 @@
 		"pageCountType": "ByWords",
 		"showSameCountsOnFolders": false,
 		"wordCountType": "SpaceDelimited",
+		"wordsPerMinute": 265,
 		"wordsPerPage": 300
 	}
 }
