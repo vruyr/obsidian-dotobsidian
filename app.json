@@ -9,11 +9,9 @@
   },
   "showUnsupportedFiles": true,
   "mobileToolbarCommands": [
-    "editor:toggle-keyboard",
     "editor:context-menu",
     "templater-obsidian:insert-templater",
     "templater-obsidian:jump-to-next-cursor-location",
-    "obsidian-task-marker:task-marker-mark",
     "editor:undo",
     "editor:redo",
     "editor:toggle-bullet-list",
