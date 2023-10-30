@@ -12,8 +12,13 @@ if [ -z "$(diff <(git cat :community-plugins.json | jq) <(jq <community-plugins.
 	git restore -W -- community-plugins.json
 fi
 
-if [ -z "$(git diff)" ]; then
-	git add .
-fi
+files_with_bogous_changes=(
+	plugins/novel-word-count/data.json
+	appearance.json
+)
+
+for f in "${files_with_bogous_changes[@]}"; do
+	[ -z "$(git diff "$f")" ] && git add "$f"
+done
 
 git status
