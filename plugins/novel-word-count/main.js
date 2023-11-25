@@ -659,12 +659,12 @@ var FileHelper = class {
   async updateFileCounts(abstractFile, counts, cancellationToken) {
     if (abstractFile instanceof import_obsidian3.TFolder) {
       for (const child of abstractFile.children) {
-        this.updateFileCounts(child, counts, cancellationToken);
+        await this.updateFileCounts(child, counts, cancellationToken);
       }
       return;
     }
     if (abstractFile instanceof import_obsidian3.TFile) {
-      this.setCounts(counts, abstractFile, this.settings.wordCountType);
+      await this.setCounts(counts, abstractFile, this.settings.wordCountType);
     }
   }
   countEmbeds(metadata) {
@@ -817,23 +817,23 @@ var FileHelper = class {
 
 // logic/filesize.ts
 var formatThresholds = [{
-  suffix: "b",
+  suffix: "B",
   suffixLong: " B",
   divisor: 1
 }, {
-  suffix: "kb",
-  suffixLong: " KB",
+  suffix: "kB",
+  suffixLong: " kB",
   divisor: 1e3
 }, {
-  suffix: "mb",
+  suffix: "MB",
   suffixLong: " MB",
   divisor: 1e6
 }, {
-  suffix: "gb",
+  suffix: "GB",
   suffixLong: " GB",
   divisor: 1e9
 }, {
-  suffix: "tb",
+  suffix: "TB",
   suffixLong: " TB",
   divisor: 1e12
 }];
