@@ -2,27 +2,27 @@
 /* https://minimal.guide */
 
 body .dataview.inline-field {
-	--inline-field-color-weak: color-mix(in srgb, var(--text-muted) 20%, transparent);
-	--inline-field-color-strong: color-mix(in srgb, var(--text-muted) 70%, transparent);
-	/* --inline-field-color-strong: var(--text-muted); */
-	--inline-field-padding: 2px;
-	--inline-field-box-radius: 4px;
-	--inline-field-opacity-major: 1;
-	--inline-field-opacity-minor: 1;
-	--inline-field-border-major: 1px var(--inline-field-color-weak) solid;
-	--inline-field-border-minor: 1px var(--inline-field-color-weak) dashed;
+	--vruyr-inline-field-color-weak: color-mix(in srgb, var(--text-muted) 20%, transparent);
+	--vruyr-inline-field-color-strong: color-mix(in srgb, var(--text-muted) 70%, transparent);
+	/* --vruyr-inline-field-color-strong: var(--text-muted); */
+	--vruyr-inline-field-padding: 2px;
+	--vruyr-inline-field-box-radius: 4px;
+	--vruyr-inline-field-opacity-major: 1;
+	--vruyr-inline-field-opacity-minor: 1;
+	--vruyr-inline-field-border-major: 1px var(--vruyr-inline-field-color-weak) solid;
+	--vruyr-inline-field-border-minor: 1px var(--vruyr-inline-field-color-weak) dashed;
 
 	white-space: nowrap;
 }
 
 body .dataview.inline-field-key {
-	border: var(--inline-field-border-major);
-	border-top-left-radius: var(--inline-field-box-radius);
-	border-bottom-left-radius: var(--inline-field-box-radius);
-	padding: var(--inline-field-padding);
-	opacity: var(--inline-field-opacity-major);
+	border: var(--vruyr-inline-field-border-major);
+	border-top-left-radius: var(--vruyr-inline-field-box-radius);
+	border-bottom-left-radius: var(--vruyr-inline-field-box-radius);
+	padding: var(--vruyr-inline-field-padding);
+	opacity: var(--vruyr-inline-field-opacity-major);
 	background-color: var(--background-primary);
-	color: var(--inline-field-color-strong);
+	color: var(--vruyr-inline-field-color-strong);
 }
 
 body .dataview.inline-field-key::after {
@@ -31,25 +31,25 @@ body .dataview.inline-field-key::after {
 }
 
 body .dataview.inline-field-value {
-	border-top: var(--inline-field-border-minor);
-	border-right: var(--inline-field-border-minor);
-	border-bottom: var(--inline-field-border-minor);
-	border-top-right-radius: var(--inline-field-box-radius);
-	border-bottom-right-radius: var(--inline-field-box-radius);
-	padding: var(--inline-field-padding);
-	opacity: var(--inline-field-opacity-minor);
+	border-top: var(--vruyr-inline-field-border-minor);
+	border-right: var(--vruyr-inline-field-border-minor);
+	border-bottom: var(--vruyr-inline-field-border-minor);
+	border-top-right-radius: var(--vruyr-inline-field-box-radius);
+	border-bottom-right-radius: var(--vruyr-inline-field-box-radius);
+	padding: var(--vruyr-inline-field-padding);
+	opacity: var(--vruyr-inline-field-opacity-minor);
 	background-color: var(--background-primary);
-	color: var(--inline-field-color-strong);
+	color: var(--vruyr-inline-field-color-strong);
 }
 
 body .dataview.inline-field-standalone-value {
-	border: var(--inline-field-border-minor);
-	border-radius: var(--inline-field-box-radius);
-	border-radius: var(--inline-field-box-radius);
-	padding: var(--inline-field-padding);
-	opacity: var(--inline-field-opacity-major);
+	border: var(--vruyr-inline-field-border-minor);
+	border-radius: var(--vruyr-inline-field-box-radius);
+	border-radius: var(--vruyr-inline-field-box-radius);
+	padding: var(--vruyr-inline-field-padding);
+	opacity: var(--vruyr-inline-field-opacity-major);
 	background-color: var(--background-primary);
-	color: var(--inline-field-color-strong);
+	color: var(--vruyr-inline-field-color-strong);
 }
 
 .dataview-inline-field-key-monospace .dataview.inline-field-key {
