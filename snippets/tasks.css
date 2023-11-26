@@ -1,7 +1,7 @@
 *[data-task="/"]:has(input[data-task="/"]:checked),
 li[data-task="/"]:has(> input:checked),
 li[data-task="/"]:has(> p > input:checked) {
-	background-color: var(--background-primary-alt);
+	border: 1px dashed rgba(255, 0, 0, 0.5);
 }
 
 *[data-task="x"]:has(input[data-task="x"]:checked),
@@ -13,7 +13,7 @@ li[data-task="x"]:has(> p > input:checked) {
 *[data-task="-"]:has(input[data-task="-"]:checked),
 li[data-task="-"]:has(> input:checked),
 li[data-task="-"]:has(> p > input:checked) {
-	opacity: 25%;
+	opacity: 33%;
 }
 
 *[data-task="!"]:has(input[data-task="!"]:checked),
