@@ -1,6 +1,5 @@
-/*
-https://docs.obsidian.md/Reference/CSS+variables/CSS+variables
-*/
+/* https://docs.obsidian.md/Reference/CSS+variables/CSS+variables
+ */
 
 .theme-light {
 	--vruyr-highlight-background-color: hsla(var(--color-accent-hsl), 0.05);
@@ -8,13 +7,32 @@ https://docs.obsidian.md/Reference/CSS+variables/CSS+variables
 }
 
 .theme-dark {
-	--vruyr-highlight-background-color: hsla(var(--color-accent-hsl), 0.07);
-	--vruyr-highlight-border-color:     hsla(var(--color-accent-hsl), 0.21);
+	--vruyr-highlight-background-color: hsla(var(--color-accent-hsl), 0.10);
+	--vruyr-highlight-border-color:     hsla(var(--color-accent-hsl), 0.30);
 }
 
-:has(>.dataview.inline-field>[data-dv-norm-key="select"])
+.dataview.inline-field:has([data-dv-norm-key="select"]) {
+	> .dataview.inline-field-key {
+		color: var(--color-accent);
+		border-color: var(--color-accent);
+	}
+
+	> .dataview.inline-field-value {
+		color: var(--color-text);
+		border-color: var(--color-text);
+	}
+}
+
+:not(li>p):has(>.dataview.inline-field>[data-dv-norm-key="select"]),
+:is(li):has(>p>.dataview.inline-field>[data-dv-norm-key="select"])
 {
 	background-color: var(--vruyr-highlight-background-color);
 	border: var(--vruyr-highlight-border-color) 1px solid;
 	border-radius: 0.3em;
+}
+
+:not(li>p):has(>.dataview.inline-field>[data-dv-norm-key="discard"]),
+:is(li):has(>p>.dataview.inline-field>[data-dv-norm-key="discard"])
+{
+	filter: opacity(25%);
 }

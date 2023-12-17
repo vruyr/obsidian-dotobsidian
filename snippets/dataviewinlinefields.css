@@ -1,5 +1,7 @@
-/* https://github.com/kepano/obsidian-minimal */
-/* https://minimal.guide */
+/* https://docs.obsidian.md/Reference/CSS+variables/CSS+variables
+ * https://github.com/kepano/obsidian-minimal
+ * https://minimal.guide
+ */
 
 body .dataview.inline-field {
 	--vruyr-inline-field-color-weak:        color-mix(in srgb, var(--color-base-100) 10%, transparent);
@@ -13,6 +15,13 @@ body .dataview.inline-field {
 	--vruyr-inline-field-border-minor: 1px var(--vruyr-inline-field-color-weak) dashed;
 
 	white-space: nowrap;
+}
+
+.dataview.inline-field-key,
+.dataview.inline-field-value,
+.dataview.inline-field-standalone-value {
+	font-family: var(--font-monospace) !important;
+	font-size: calc(var(--font-text-size) * 0.85) !important;
 }
 
 body .dataview.inline-field-key {
@@ -50,13 +59,6 @@ body .dataview.inline-field-standalone-value {
 	opacity:                     var(--vruyr-inline-field-opacity-major);
 	background-color:            var(--vruyr-inline-field-color-background);
 	color:                       var(--vruyr-inline-field-color-strong);
-}
-
-.dataview.inline-field-key,
-.dataview.inline-field-value,
-.dataview.inline-field-standalone-value {
-	font-family: var(--font-monospace) !important;
-	font-size: calc(var(--font-text-size) * 0.85) !important;
 }
 
 /* Render inline fields from new line */
