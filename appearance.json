@@ -1,6 +1,6 @@
 {
 	"accentColor": "#0077ff",
-	"baseFontSize": 15,
+	"baseFontSize": 16,
 	"cssTheme": "Minimal",
 	"enabledCssSnippets": [
 		"dataviewinlinefields",
