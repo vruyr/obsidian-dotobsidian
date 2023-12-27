@@ -46,5 +46,5 @@
   "livePreview": true,
   "spellcheck": true,
   "attachmentFolderPath": "./",
-  "propertiesInDocument": "visible"
+  "propertiesInDocument": "hidden"
 }
