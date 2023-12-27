@@ -34,5 +34,11 @@
 :not(li>p):has(>.dataview.inline-field>[data-dv-norm-key="discard"]),
 :is(li):has(>p>.dataview.inline-field>[data-dv-norm-key="discard"])
 {
+	filter: opacity(25%) grayscale(100%) blur(1px);
+}
+
+:not(li>p):has(>.dataview.inline-field>[data-dv-norm-key="reviewed"]),
+:is(li):has(>p>.dataview.inline-field>[data-dv-norm-key="reviewed"])
+{
 	filter: opacity(25%);
 }
