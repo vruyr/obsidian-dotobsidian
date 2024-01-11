@@ -5,7 +5,7 @@
       "marks": " ",
       "complete": false,
       "removeExpr": "\\[\\s*(done|dropped)\\s*::\\s*[-\\dT:]+\\]",
-      "appendDateFormat": "[[stopped::]YYYY-MM-DD[T]HH:mm:ssZ[]]",
+      "appendDateFormat": " [[stopped::]YYYY-MM-DD[T]HH:mm:ssZ[]]",
       "registerCommand": false,
       "useContextMenu": false
     },
@@ -14,7 +14,7 @@
       "marks": "/",
       "complete": false,
       "removeExpr": "",
-      "appendDateFormat": "[[started::]YYYY-MM-DD[T]HH:mm:ssZ[]]",
+      "appendDateFormat": " [[started::]YYYY-MM-DD[T]HH:mm:ssZ[]]",
       "registerCommand": false,
       "useContextMenu": false
     },
@@ -23,7 +23,7 @@
       "marks": "x",
       "complete": true,
       "removeExpr": "",
-      "appendDateFormat": "[[done::]YYYY-MM-DD[T]HH:mm:ssZ[]]",
+      "appendDateFormat": " [[done::]YYYY-MM-DD[T]HH:mm:ssZ[]]",
       "registerCommand": false,
       "useContextMenu": false
     },
@@ -32,7 +32,7 @@
       "marks": "-",
       "complete": true,
       "removeExpr": "",
-      "appendDateFormat": "[[dropped::]YYYY-MM-DD[T]HH:mm:ssZ[]]",
+      "appendDateFormat": " [[dropped::]YYYY-MM-DD[T]HH:mm:ssZ[]]",
       "registerCommand": false,
       "useContextMenu": false
     }
