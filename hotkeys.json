@@ -1,12 +1,12 @@
 {
+  "editor:toggle-bold": [],
+  "editor:toggle-italics": [],
   "app:toggle-left-sidebar": [
     {
       "modifiers": [
-        "Alt",
-        "Mod",
-        "Shift"
+        "Mod"
       ],
-      "key": "S"
+      "key": "B"
     }
   ],
   "app:toggle-right-sidebar": [
@@ -15,7 +15,7 @@
         "Alt",
         "Mod"
       ],
-      "key": "S"
+      "key": "B"
     }
   ],
   "command-palette:open": [
@@ -266,9 +266,19 @@
       "key": "M"
     }
   ],
+  "workspaces:load": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "S"
+    }
+  ],
   "workspaces:save-and-load": [
     {
       "modifiers": [
+        "Alt",
         "Mod",
         "Shift"
       ],
