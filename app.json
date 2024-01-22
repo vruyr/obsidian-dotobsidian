@@ -9,7 +9,10 @@
   },
   "showUnsupportedFiles": true,
   "mobileToolbarCommands": [
+    "command-palette:open",
     "editor:context-menu",
+    "editor:go-start",
+    "editor:go-end",
     "templater-obsidian:insert-templater",
     "templater-obsidian:jump-to-next-cursor-location",
     "editor:indent-list",
