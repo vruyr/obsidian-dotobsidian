@@ -34,6 +34,22 @@ body .dataview.inline-field-key {
 	color:                       var(--vruyr-inline-field-color-strong);
 }
 
+body .dataview.inline-field-key[data-dv-norm-key="youtube"] {
+	border:            none;
+	opacity:           inherit;
+	background-color:  inherit;
+	color:             inherit;
+	font-family:       inherit !important;
+	font-size:         inherit !important;
+}
+
+body .dataview.inline-field:has(.inline-field-key[data-dv-norm-key="youtube"]) > .dataview.inline-field-value {
+	border:        var(--vruyr-inline-field-border-major);
+	border-radius: var(--vruyr-inline-field-box-radius);
+	color:         var(--vruyr-inline-field-color-strong);
+	font-family:   var(--font-monospace) !important;
+}
+
 body .dataview.inline-field-key::after {
 	margin-left: 0;
 	content: "";
