@@ -5,7 +5,8 @@
 	"enabledCssSnippets": [
 		"dataviewinlinefields",
 		"highlights",
-		"tasks"
+		"tasks",
+		"links"
 	],
 	"nativeMenus": true,
 	"theme": "system"

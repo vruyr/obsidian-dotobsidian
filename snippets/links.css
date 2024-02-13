@@ -1,0 +1,114 @@
+/* The :not(.\9) here is to increase specificity so this rule is picked up. */
+
+/* Variables */
+body:not(.\9) {
+	/* Customizations of vars from app.css Links section. */
+	--link-color: var(--text-normal);
+	--link-color-hover: var(--text-accent-hover);
+	--link-decoration: underline;
+	--link-decoration-hover: underline;
+	--link-decoration-thickness: 0.1ex;
+	--link-external-color: var(--text-normal);
+	--link-external-color-hover: var(--text-accent-hover);
+	--link-external-decoration: underline;
+	--link-external-decoration-hover: underline;
+	--link-external-filter: none;
+	--link-unresolved-color: var(--text-normal);
+	--link-unresolved-opacity: 0.7;
+	--link-unresolved-filter: none;
+	--link-unresolved-decoration-style: solid;
+	--link-unresolved-decoration-color: hsla(var(--interactive-accent-hsl), 0.3);
+	/* New vars */
+	--link-underline-offset: 0.5ex;
+	--link-decoration-thickness-hover: initial;
+}
+
+/* Internal Resolved Links */
+.cm-hmd-internal-link .cm-underline:not(.\9),
+.internal-link:not(.\9) {
+	color: var(--link-color);
+	text-decoration-color: var(--link-color);
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+	text-decoration-thickness: var(--link-decoration-thickness);
+	text-underline-offset: var(--link-underline-offset);
+
+	&:hover {
+		color: var(--link-color);
+		text-decoration-color: var(--link-color);
+		text-decoration-line: underline;
+		text-decoration-style: dashed;
+		text-decoration-thickness: var(--link-decoration-thickness-hover);
+		text-underline-offset: var(--link-underline-offset);
+	}
+}
+
+/* Cleanup: CodeMirror Internal Resolved Links Hover */
+.cm-hmd-internal-link:not(.\9):not(.\9):hover {
+	text-decoration-line: none;
+}
+
+/* Internal Unresolved Links */
+.cm-hmd-internal-link .is-unresolved .cm-underline:not(.\9),
+.internal-link.is-unresolved:not(.\9) {
+	text-decoration-color: var(--text-normal);
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+	text-decoration-thickness: var(--link-decoration-thickness);
+	text-underline-offset: var(--link-underline-offset);
+
+	&:hover {
+		color: var(--link-color);
+		text-decoration-color: var(--text-normal);
+		text-decoration-style: wavy;
+		text-decoration-thickness: var(--link-decoration-thickness);
+	}
+}
+
+/* External Links */
+:is(.cm-url, :is(.cm-link, .cm-url) .cm-underline):not(.\9):not(.\9),
+.external-link:not(.\9) {
+	text-decoration-color: var(--text-accent);
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+	text-decoration-thickness: var(--link-decoration-thickness);
+	text-underline-offset: var(--link-underline-offset);
+
+	&:hover {
+		text-decoration-style: initial;
+		text-decoration-thickness: initial;
+	}
+
+	background-position: initial;
+	background-repeat: initial;
+	background-image: initial;
+	background-size: initial;
+	padding-right: initial;
+	background-position-y: initial;
+}
+
+/* Cleanup: CodeMirror External Links Hover */
+.cm-link:not(.\9):not(.\9):hover {
+	text-decoration-line: none;
+}
+
+
+/* Test Document
+
+## Internal Resolved
+
+[[Effort Channels]]
+
+## Internal Unresolved
+
+[[Unresolved Link]]
+
+## External
+
+[External App Link](omnifocus:///perspective/Now)
+
+https://www.vruyr.com
+
+[https://www.vruyr.com](https://www.vruyr.com)
+
+*/
