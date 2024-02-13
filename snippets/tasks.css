@@ -1,7 +1,7 @@
 *[data-task="/"]:has(input[data-task="/"]:checked),
 li[data-task="/"]:has(> input:checked),
 li[data-task="/"]:has(> p > input:checked) {
-	border: 1px dashed rgba(255, 0, 0, 0.5);
+	border: 1px dashed rgb(50, 200, 50);
 }
 
 *[data-task="x"]:has(input[data-task="x"]:checked),
