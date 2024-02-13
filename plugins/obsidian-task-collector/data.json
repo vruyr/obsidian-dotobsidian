@@ -57,7 +57,7 @@
   },
   "debug": false,
   "convertEmptyLines": false,
-  "hideNotifications": false,
+  "hideNotifications": true,
   "skipSectionMatch": "",
   "version": {
     "major": 1,
