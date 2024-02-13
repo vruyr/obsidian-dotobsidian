@@ -10,6 +10,12 @@ li[data-task="x"]:has(> p > input:checked) {
 	filter: opacity(50%);
 }
 
+*[data-task="X"]:has(input[data-task="X"]:checked),
+li[data-task="X"]:has(> input:checked),
+li[data-task="X"]:has(> p > input:checked) {
+	filter: opacity(50%);
+}
+
 *[data-task="-"]:has(input[data-task="-"]:checked),
 li[data-task="-"]:has(> input:checked),
 li[data-task="-"]:has(> p > input:checked) {

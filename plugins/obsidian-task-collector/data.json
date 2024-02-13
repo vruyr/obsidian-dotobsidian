@@ -27,6 +27,15 @@
       "registerCommand": false,
       "useContextMenu": false
     },
+    "done (without date)": {
+      "name": "done (without date)",
+      "marks": "X",
+      "complete": true,
+      "removeExpr": "",
+      "appendDateFormat": "",
+      "registerCommand": false,
+      "useContextMenu": false
+    },
     "dropped": {
       "name": "dropped",
       "marks": "-",
