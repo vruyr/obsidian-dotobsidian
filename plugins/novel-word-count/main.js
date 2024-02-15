@@ -555,7 +555,7 @@ var NovelWordCountSettingTab = class extends import_obsidian2.PluginSettingTab {
         await this.plugin.initialize();
       };
       new import_obsidian2.Setting(containerEl).setName("Include file/folder names").setDesc(
-        "Only count paths matching the indicated term(s). Case-sensitive, comma-separated. Defaults to all files."
+        "Only count paths matching the indicated term(s). Case-sensitive, comma-separated. Defaults to all files. Any term starting with ! will be excluded instead of included."
       ).addText((txt) => {
         txt.setPlaceholder("").setValue(this.plugin.settings.includeDirectories).onChange((0, import_obsidian2.debounce)(includePathsChanged.bind(this, txt), 1e3));
       });
@@ -813,6 +813,7 @@ var FileHelper = class {
     this.debugHelper = new DebugHelper();
     this.canvasHelper = new CanvasHelper(this.debugHelper);
     this.pathIncludeMatchers = [];
+    this.pathExcludeMatchers = [];
     this.FileTypeAllowlist = /* @__PURE__ */ new Set([
       "",
       // Markdown extensions
@@ -848,14 +849,20 @@ var FileHelper = class {
     const debugEnd = this.debugHelper.debugStart("getAllFileCounts");
     let files = this.vault.getFiles();
     if (typeof this.plugin.settings.includeDirectories === "string" && this.plugin.settings.includeDirectories.trim() !== "*" && this.plugin.settings.includeDirectories.trim() !== "") {
-      const includeMatchers = this.plugin.settings.includeDirectories.trim().split(",").map((matcher) => matcher.trim());
+      const allMatchers = this.plugin.settings.includeDirectories.trim().split(",").map((matcher) => matcher.trim());
+      const includeMatchers = allMatchers.filter(
+        (matcher) => !matcher.startsWith("!")
+      );
+      const excludeMatchers = allMatchers.filter((matcher) => matcher.startsWith("!")).map((matcher) => matcher.slice(1));
       const matchedFiles = files.filter(
-        (file) => includeMatchers.some((matcher) => file.path.includes(matcher))
+        (file) => (includeMatchers.length === 0 ? true : includeMatchers.some((matcher) => file.path.includes(matcher))) && !excludeMatchers.some((matcher) => file.path.includes(matcher))
       );
       if (matchedFiles.length > 0) {
         this.pathIncludeMatchers = includeMatchers;
+        this.pathExcludeMatchers = excludeMatchers;
       } else {
         this.pathIncludeMatchers = [];
+        this.pathExcludeMatchers = [];
         this.debugHelper.debug(
           "No files matched by includeDirectories setting. Defaulting to all files."
         );
@@ -1041,6 +1048,9 @@ var FileHelper = class {
   }
   shouldCountFile(file, metadata) {
     if (this.pathIncludeMatchers.length > 0 && !this.pathIncludeMatchers.some((matcher) => file.path.includes(matcher))) {
+      return false;
+    }
+    if (this.pathExcludeMatchers.length > 0 && this.pathExcludeMatchers.some((matcher) => file.path.includes(matcher))) {
       return false;
     }
     if (!this.FileTypeAllowlist.has(file.extension.toLowerCase())) {
