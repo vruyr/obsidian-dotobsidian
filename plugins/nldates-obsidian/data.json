@@ -3,10 +3,10 @@
   "autocompleteTriggerPhrase": "@",
   "isAutosuggestEnabled": true,
   "format": "YYYY-MM-DD",
-  "timeFormat": "YYYY-MM-DD[T]HH:mm:ssZ",
-  "separator": "--",
+  "timeFormat": "HH:mm:ssZ",
+  "separator": "T",
   "weekStart": "locale-default",
   "modalToggleTime": false,
   "modalToggleLink": false,
-  "modalMomentFormat": "YYYY-MM-DD[T]HH:mm:ssZ"
+  "modalMomentFormat": "[[defer::]YYYY-MM-DD[]]"
 }
