@@ -782,8 +782,10 @@ function removeNonCountedContent(content, config) {
     content = content.replace(/(%%.+?%%|<!--.+?-->)/gims, "");
   }
   if (config.excludeNonVisibleLinkPortions) {
-    content = content.replace(/\[(.+?)\]\(.+?\)/gim, "$1");
-    content = content.replace(/\[\[.+?\|(.+?)\]\]/gim, "$1");
+    content = content.replace(/\[([^\]]*?)\]\([^\)]*?\)/gim, "$1");
+    content = content.replace(/\[\[(.*?)\]\]/gim, (_, $1) => {
+      return !$1 ? "" : $1.includes("|") ? $1.slice($1.indexOf("|") + 1) : $1;
+    });
   }
   return content;
 }
