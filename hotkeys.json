@@ -285,5 +285,14 @@
       "key": "S"
     }
   ],
-  "graph:open": []
+  "graph:open": [],
+  "templater-obsidian:Templates/Project Name Date Prefix.md": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "P"
+    }
+  ]
 }

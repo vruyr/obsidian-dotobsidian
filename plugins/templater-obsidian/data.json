@@ -26,7 +26,8 @@
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
-    "Templates/Log Entry.md"
+    "Templates/Log Entry.md",
+    "Templates/Project Name Date Prefix.md"
   ],
   "startup_templates": [
     ""
