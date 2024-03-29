@@ -1,19 +1,37 @@
 *[data-task="/"]:has(input[data-task="/"]:checked),
 li[data-task="/"]:has(> input:checked),
 li[data-task="/"]:has(> p > input:checked) {
-	border: 1px dashed rgb(50, 200, 50);
+	/* The indentation guide is actually a border on nested lists. */
+	& > :is(ul,ol)::before {
+		border-right: 3px dashed rgb(50, 200, 50);
+		left: calc(var(--indentation-guide-reading-indent) - 1px);
+	}
+}
+
+.no-task-highlight-started *[data-task="/"]:has(input[data-task="/"]:checked),
+.no-task-highlight-started li[data-task="/"]:has(> input:checked),
+.no-task-highlight-started li[data-task="/"]:has(> p > input:checked) {
+	border: none;
 }
 
 *[data-task="x"]:has(input[data-task="x"]:checked),
 li[data-task="x"]:has(> input:checked),
 li[data-task="x"]:has(> p > input:checked) {
-	filter: opacity(50%);
+	background-color: rgba(50, 200, 50, 10%);
+	& > :is(ul,ol)::before {
+		border-right: 1px solid rgb(50, 200, 50);
+		left: calc(var(--indentation-guide-reading-indent) - 1px);
+	}
 }
 
 *[data-task="X"]:has(input[data-task="X"]:checked),
 li[data-task="X"]:has(> input:checked),
 li[data-task="X"]:has(> p > input:checked) {
-	filter: opacity(50%);
+	background-color: rgba(50, 200, 50, 10%);
+	& > :is(ul,ol)::before {
+		border-right: 1px solid rgb(50, 200, 50);
+		left: calc(var(--indentation-guide-reading-indent) - 1px);
+	}
 }
 
 *[data-task="-"]:has(input[data-task="-"]:checked),
