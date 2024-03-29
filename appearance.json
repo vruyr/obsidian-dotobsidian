@@ -3,10 +3,10 @@
 	"baseFontSize": 16,
 	"cssTheme": "Minimal",
 	"enabledCssSnippets": [
-		"dataviewinlinefields",
-		"highlights",
-		"tasks",
-		"links"
+		"DataviewInlineFields",
+		"Highlights",
+		"Tasks",
+		"Links"
 	],
 	"nativeMenus": true,
 	"theme": "system"
