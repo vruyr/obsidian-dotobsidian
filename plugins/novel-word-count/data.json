@@ -15,6 +15,7 @@
 		"debugMode": false,
 		"excludeCodeBlocks": false,
 		"excludeComments": false,
+		"excludeFootnotes": false,
 		"excludeNonVisibleLinkPortions": false,
 		"folderAbbreviateDescriptions": false,
 		"folderAlignment": "inline",
