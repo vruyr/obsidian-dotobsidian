@@ -48,3 +48,9 @@
 {
 	filter: opacity(25%);
 }
+
+
+.cm-header.cm-inline-code {
+	font-variant: normal;
+	background-color: var(--background-primary) !important;
+}
