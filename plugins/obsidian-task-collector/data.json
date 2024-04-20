@@ -65,7 +65,7 @@
     "collectTasks": false
   },
   "debug": false,
-  "convertEmptyLines": false,
+  "convertEmptyLines": true,
   "hideNotifications": true,
   "skipSectionMatch": "",
   "version": {
