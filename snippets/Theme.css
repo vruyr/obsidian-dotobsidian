@@ -1,0 +1,4 @@
+body:not(.\9) {
+	--tab-max-width: 8.5in;
+	--tab-width: var(--tab-max-width);
+}

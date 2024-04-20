@@ -6,7 +6,8 @@
 		"DataviewInlineFields",
 		"Highlights",
 		"Tasks",
-		"Links"
+		"Links",
+		"Theme"
 	],
 	"nativeMenus": true,
 	"theme": "system"
