@@ -9,6 +9,15 @@
       "registerCommand": false,
       "useContextMenu": false
     },
+    "selected": {
+      "name": "selected",
+      "marks": "*",
+      "complete": false,
+      "removeExpr": "",
+      "appendDateFormat": "",
+      "registerCommand": false,
+      "useContextMenu": false
+    },
     "started": {
       "name": "started",
       "marks": "/",
@@ -46,7 +55,7 @@
       "useContextMenu": false
     }
   },
-  "markCycle": "/x",
+  "markCycle": "*/x",
   "collectionEnabled": false,
   "previewClickModal": true,
   "contextMenu": {
