@@ -40,7 +40,11 @@
     "editor:copy",
     "editor:paste",
     "editor:delete-paragraph",
-    "editor:configure-toolbar"
+    "editor:configure-toolbar",
+    "editor:move-caret-up",
+    "editor:move-caret-down",
+    "editor:move-caret-left",
+    "editor:move-caret-right"
   ],
   "readableLineLength": false,
   "showLineNumber": true,
