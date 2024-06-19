@@ -30,5 +30,8 @@
 	"minimal-style@@h6-size": "1em",
 	"minimal-style@@h6-l": true,
 	"minimal-style@@h6-weight": 600,
-	"minimal-style@@h6-variant": "normal"
+	"minimal-style@@h6-variant": "normal",
+
+	"minimal-style@@header-height": "36px",
+	"minimal-style@@tabs-style": "tabs-default"
 }
