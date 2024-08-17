@@ -122,15 +122,6 @@
       "key": "E"
     }
   ],
-  "outline:open": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "O"
-    }
-  ],
   "tag-pane:open": [
     {
       "modifiers": [
@@ -355,6 +346,25 @@
         "Mod"
       ],
       "key": "R"
+    }
+  ],
+  "oin-gotoheading:gotoheading-switcher": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "O"
+    }
+  ],
+  "oin-gotoheading:gotoheading-switcher-folder": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod",
+        "Shift"
+      ],
+      "key": "O"
     }
   ]
 }
