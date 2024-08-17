@@ -1,0 +1,54 @@
+/*
+Docs: https://help.obsidian.md/Editing+and+formatting/Callouts
+Refs: app.css
+*/
+
+body:not(.\9) {
+	--callout-padding: calc(var(--size-4-3)/2) calc(var(--size-4-3)/2) calc(var(--size-4-3)/2) calc(var(--size-4-6)/2);
+	--callout-title-padding: calc(var(--size-4-3)/2) calc(var(--size-4-3)/2) calc(var(--size-4-3)/2) calc(var(--size-4-6)/2);
+	--callout-default: var(--text-normal);
+	--callout-content-padding: 0;
+	--callout-content-background: transparent;
+
+	--callout-border-width: 0px;
+	--callout-border-opacity: 0.25;
+	--callout-radius: var(--radius-m);
+	--callout-blend-mode: var(--highlight-mix-blend-mode);
+	--callout-title-color: inherit;
+	--callout-title-size: inherit;
+	--callout-title-weight: var(--font-weight);
+}
+
+.callout:not(.\9) {
+	background-color: rgba(var(--callout-color), var(--callout-background-opacity));
+	/* border-radius: 0.5em; */
+	--callout-border-width: 1px;
+	--callout-color: 128, 128, 128;
+}
+
+.callout-title:not(.\9) {
+	--callout-title-color: var(--callout-color);
+	--callout-title-background-opacity: 0.1;
+	background-color: rgba(var(--callout-title-color), var(--callout-title-background-opacity));;
+	border-top-left-radius: var(--callout-radius);
+	border-bottom-right-radius: var(--callout-radius);
+	color: var(--callout-default);
+	margin: calc(-1 * var(--size-4-3)/2) calc(-1 * var(--size-4-3)/2) calc(-1 * var(--size-4-3)/2) calc(-1 * var(--size-4-6)/2)
+}
+
+.callout[data-callout="thoughts"] {
+	--callout-icon: lucide-lightbulb;
+}
+
+/* --background-primary */
+
+.callout[data-callout="youtube"] {
+	--callout-icon: lucide-youtube;
+	& > .callout-title > .callout-icon {
+		--callout-color: 255, 255, 255;
+		background-color: rgb(255, 2, 0);
+		border-radius: 0.25em;
+		aspect-ratio: 1 / 1;
+	}
+	/* --callout-color: 128, 0, 0; */
+}
