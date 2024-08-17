@@ -30,7 +30,7 @@
     "Templates/Project Name Date Prefix.md"
   ],
   "startup_templates": [
-    ""
+    "Templates/Templater Startup.md"
   ],
   "enable_ribbon_icon": true
 }
