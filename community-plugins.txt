@@ -1,0 +1,14 @@
+Groups:
+
+1. Required to render content
+
+	1. "dataview"
+		- code blocks and inline queries
+
+	2. "obsidian-minimal-settings" and the Minimal theme
+		- colorfulHeadings
+		- CSS Classes: cards, cards-2-3, cards-align-bottom
+
+2. Sorted by most used to least used
+
+3. Sorted alphabetically
