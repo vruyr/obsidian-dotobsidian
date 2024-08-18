@@ -1,7 +1,7 @@
 {
   "ribbonIcon": true,
   "ribbonCommandUsesCode": true,
-  "executeTemplate": "~/.bin/vsc \"{{vaultpath}}\" \"{{vaultpath}}/{{filepath}}\"",
+  "executeTemplate": "~/.bin/vsc \"{{vaultpath}}\" --goto \"{{vaultpath}}/{{filepath}}:{{line}}:{{ch}}\"",
   "openFile": true,
   "workspacePath": "{{vaultpath}}",
   "useUrlInsiders": false
