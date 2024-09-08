@@ -6,35 +6,49 @@ Refs: app.css
 body:not(.\9) {
 	--callout-padding: calc(var(--size-4-3)/2) calc(var(--size-4-3)/2) calc(var(--size-4-3)/2) calc(var(--size-4-6)/2);
 	--callout-title-padding: calc(var(--size-4-3)/2) calc(var(--size-4-3)/2) calc(var(--size-4-3)/2) calc(var(--size-4-6)/2);
-	--callout-default: var(--text-normal);
 	--callout-content-padding: 0;
-	--callout-content-background: transparent;
+
+	--vruyr-callout-outline-color: var(--text-normal);
+	--vruyr-callout-outline-border-transparency: 50%;
+	--vruyr-callout-outline-title-background-transparency: 7%;
 
 	--callout-border-width: 0px;
-	--callout-border-opacity: 0.25;
+	--callout-border-opacity: 0.5;
 	--callout-radius: var(--radius-m);
 	--callout-blend-mode: var(--highlight-mix-blend-mode);
-	--callout-title-color: inherit;
 	--callout-title-size: inherit;
 	--callout-title-weight: var(--font-weight);
 }
 
 .callout:not(.\9) {
-	background-color: rgba(var(--callout-color), var(--callout-background-opacity));
-	/* border-radius: 0.5em; */
 	--callout-border-width: 1px;
-	--callout-color: 128, 128, 128;
+
+	background-color: inherit;
+	border-color: color-mix(in srgb, var(--vruyr-callout-outline-color) var(--vruyr-callout-outline-border-transparency), transparent);
+
+	& > .callout-title {
+		color: inherit;
+		margin: calc(-1 * var(--size-4-3)/2) calc(-1 * var(--size-4-3)/2) calc(-1 * var(--size-4-3)/2) calc(-1 * var(--size-4-6)/2);
+
+		& > .callout-icon {
+			& .svg-icon {
+				color: var(--vruyr-callout-outline-color);
+			}
+		}
+	}
+
+	& > .callout-content {
+		background-color: inherit;
+	}
 }
 
-.callout-title:not(.\9) {
-	--callout-title-color: var(--callout-color);
-	--callout-title-background-opacity: 0.1;
-	background-color: rgba(var(--callout-title-color), var(--callout-title-background-opacity));;
-	border-top-left-radius: var(--callout-radius);
-	border-bottom-right-radius: var(--callout-radius);
-	color: var(--callout-default);
-	margin: calc(-1 * var(--size-4-3)/2) calc(-1 * var(--size-4-3)/2) calc(-1 * var(--size-4-3)/2) calc(-1 * var(--size-4-6)/2)
+.callout:not(.\9):not(.is-collapsed) > .callout-title:has(+ .callout-content) {
+	background-color: color-mix(in srgb, var(--vruyr-callout-outline-color) var(--vruyr-callout-outline-title-background-transparency), transparent);
 }
+
+/*
+ *
+ */
 
 .callout[data-callout="thoughts"] {
 	--callout-icon: lucide-lightbulb;
@@ -44,11 +58,26 @@ body:not(.\9) {
 
 .callout[data-callout="youtube"] {
 	--callout-icon: lucide-youtube;
-	& > .callout-title > .callout-icon {
-		--callout-color: 255, 255, 255;
+
+	& > .callout-title > .callout-icon .svg-icon {
+		color: rgb(255, 255, 255);
 		background-color: rgb(255, 2, 0);
 		border-radius: 0.25em;
 		aspect-ratio: 1 / 1;
 	}
-	/* --callout-color: 128, 0, 0; */
+}
+
+
+.callout[data-callout="warning"] {
+	--vruyr-callout-outline-color: rgb(255, 165, 0);
+}
+
+
+.callout[data-callout="error"] {
+	--vruyr-callout-outline-color: rgb(255, 0, 0);
+}
+
+
+.callout[data-callout="tip"] {
+	--vruyr-callout-outline-color: rgb(0, 200, 0);
 }
