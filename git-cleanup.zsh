@@ -13,7 +13,6 @@ if [ -z "$(diff <(git cat :community-plugins.json | jq) <(jq <community-plugins.
 fi
 
 files_with_bogous_changes=(
-	plugins/novel-word-count/data.json
 	appearance.json
 )
 
