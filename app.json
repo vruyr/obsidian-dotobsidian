@@ -8,7 +8,7 @@
     "downscalePercent": 80
   },
   "showUnsupportedFiles": true,
-  "mobilePullAction": "command-palette:open",
+  "mobilePullAction": "editor:go-end",
   "mobileToolbarCommands": [
     "command-palette:open",
     "editor:context-menu",
