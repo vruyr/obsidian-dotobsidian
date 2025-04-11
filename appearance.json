@@ -11,5 +11,6 @@
 		"Callouts"
 	],
 	"nativeMenus": true,
+	"showRibbon": false,
 	"theme": "system"
 }
