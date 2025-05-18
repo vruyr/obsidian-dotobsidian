@@ -1,5 +1,10 @@
+#{{{ Transient
 .DS_Store
+#}}}
+
+#{{{ Manual
 /workspace
 /workspace-mobile.json
 /workspace.json
 /workspaces.json
+#}}}
