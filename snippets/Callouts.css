@@ -85,3 +85,8 @@ body:not(.\9) {
 .callout[data-callout="tip"] {
 	--vruyr-callout-outline-color: rgb(0, 200, 0);
 }
+
+.callout[data-callout="important"] {
+	--callout-icon: lucide-message-square-warning;
+}
+
