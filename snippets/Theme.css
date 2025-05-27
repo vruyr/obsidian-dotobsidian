@@ -6,7 +6,7 @@ body:not(.\9) {
 /* This is only for Live Preview.
  * In reading mode <li> elemets are renders and markers are properly aligned.
  */
-.cm-s-obsidian span.cm-formatting-list {
+.cm-s-obsidian span.cm-formatting-list-ol {
 	min-width: 2.5em;
 	text-align: right;
 	display: inline-block;
