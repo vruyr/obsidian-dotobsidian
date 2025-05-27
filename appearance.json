@@ -3,12 +3,13 @@
 	"baseFontSize": 16,
 	"cssTheme": "Minimal",
 	"enabledCssSnippets": [
+		"Calendar",
+		"Callouts",
 		"DataviewInlineFields",
 		"Highlights",
-		"Tasks",
 		"Links",
-		"Theme",
-		"Callouts"
+		"Tasks",
+		"Theme"
 	],
 	"nativeMenus": true,
 	"showRibbon": false,
