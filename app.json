@@ -55,5 +55,6 @@
   "spellcheck": true,
   "attachmentFolderPath": "./",
   "propertiesInDocument": "hidden",
-  "showIndentGuide": true
+  "showIndentGuide": true,
+  "newLinkFormat": "absolute"
 }
