@@ -50,6 +50,10 @@ body:not(.\9) {
  *
  */
 
+.callout[data-callout="note"] {
+	--callout-icon: lucide-pointer;
+}
+
 .callout[data-callout="thoughts"] {
 	--callout-icon: lucide-lightbulb;
 }
