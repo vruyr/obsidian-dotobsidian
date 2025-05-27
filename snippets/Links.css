@@ -3,21 +3,22 @@
 /* Variables */
 body:not(.\9) {
 	/* Customizations of vars from app.css Links section. */
-	--link-color: var(--text-normal);
-	--link-color-hover: var(--text-accent-hover);
+	--link-color: inherit;
+	--link-color-hover: inherit;
 	--link-decoration: underline;
 	--link-decoration-hover: underline;
 	--link-decoration-thickness: 0.1ex;
-	--link-external-color: var(--text-normal);
-	--link-external-color-hover: var(--text-accent-hover);
+	--link-weight: inherit;
+	--link-external-color: inherit;
+	--link-external-color-hover: inherit;
 	--link-external-decoration: underline;
 	--link-external-decoration-hover: underline;
 	--link-external-filter: none;
-	--link-unresolved-color: var(--text-normal);
+	--link-unresolved-color: inherit;
 	--link-unresolved-opacity: 0.7;
 	--link-unresolved-filter: none;
 	--link-unresolved-decoration-style: solid;
-	--link-unresolved-decoration-color: hsla(var(--interactive-accent-hsl), 0.3);
+	--link-unresolved-decoration-color: hsla(var(--interactive-accent-hsl), 0.5);
 	/* New vars */
 	--link-underline-offset: 0.5ex;
 	--link-decoration-thickness-hover: initial;
@@ -51,7 +52,7 @@ body:not(.\9) {
 /* Internal Unresolved Links */
 .cm-hmd-internal-link .is-unresolved .cm-underline:not(.\9),
 .internal-link.is-unresolved:not(.\9) {
-	text-decoration-color: var(--text-normal);
+	text-decoration-color: var(--link-unresolved-decoration-color);
 	text-decoration-line: underline;
 	text-decoration-style: dotted;
 	text-decoration-thickness: var(--link-decoration-thickness);
@@ -59,7 +60,7 @@ body:not(.\9) {
 
 	&:hover {
 		color: var(--link-color);
-		text-decoration-color: var(--text-normal);
+		text-decoration-color: var(--link-unresolved-decoration-color);
 		text-decoration-style: wavy;
 		text-decoration-thickness: var(--link-decoration-thickness);
 	}
