@@ -4,7 +4,6 @@
     "cssclasses": "multitext",
     "tags": "tags",
     "timecreated": "datetime",
-    "added": "datetime",
-    "showAllPendingTasks": "checkbox"
+    "added": "datetime"
   }
 }
