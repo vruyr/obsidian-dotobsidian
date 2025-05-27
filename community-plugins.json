@@ -2,19 +2,19 @@
   "dataview",
   "obsidian-minimal-settings",
 
-  "templater-obsidian",
-  "periodic-notes",
   "nldates-obsidian",
-  "open-vscode",
-  "obsidian-outliner",
-  "oin-gotoheading",
+  "templater-obsidian",
+
   "obsidian-task-collector",
-  "settings-search",
+  "oin-gotoheading",
+  "periodic-notes",
 
   "calendar",
+  "obsidian-outliner",
   "obsidian-plugin-update-tracker",
-  "obsidian-global-hotkeys",
-  "obsidian-zoom",
+  "obsidian-sortable",
   "obsidian-style-settings",
-  "obsidian-sortable"
+  "obsidian-zoom",
+  "open-vscode",
+  "settings-search"
 ]

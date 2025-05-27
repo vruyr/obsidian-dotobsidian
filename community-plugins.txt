@@ -1,14 +1,44 @@
-Groups:
+Groups are as follows:
 
-1. Required to render content
+1. Plugins required to render content:
 
 	1. "dataview"
+
 		- code blocks and inline queries
 
 	2. "obsidian-minimal-settings" and the Minimal theme
+
 		- colorfulHeadings
 		- CSS Classes: cards, cards-2-3, cards-align-bottom
 
-2. Sorted by most used to least used
+2. Absolutely essential plugins to add content:
 
-3. Sorted alphabetically
+	1. "nldates-obsidian"
+
+		- Insert formatted dates into a note given a freeform input.
+		- Used via API in some of Templater templates.
+
+	2. "templater-obsidian"
+
+		- Feature-rich template system with support for arbitrary JavaScript code execution.
+
+3. Plugins I can do without, but that significantly speed up some workflows:
+
+	1.	"obsidian-task-collector"
+
+		- Defines progression for task statuses.
+		- Have hotkeys to move the task to next or to an arbitrary status.
+		- Inserts timestamps per configuration.
+
+	2.	"oin-gotoheading"
+
+		- Allows jumping to a heading in the current or adjacent notes with a hotkey.
+
+	3.	"periodic-notes"
+
+		- Defines hotkeys to create daily and weekly notes, and to go to previous or next note.
+
+4. The rest
+
+
+Plugins within a group are sorted alphabetically.
