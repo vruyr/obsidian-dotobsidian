@@ -88,5 +88,6 @@ body:not(.\9) {
 
 .callout[data-callout="important"] {
 	--callout-icon: lucide-message-square-warning;
+	--vruyr-callout-outline-color: rgb(150, 0, 200);
 }
 
