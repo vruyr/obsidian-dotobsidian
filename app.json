@@ -54,7 +54,7 @@
   "livePreview": true,
   "spellcheck": true,
   "attachmentFolderPath": "./",
-  "propertiesInDocument": "hidden",
+  "propertiesInDocument": "visible",
   "showIndentGuide": true,
   "newLinkFormat": "absolute"
 }
