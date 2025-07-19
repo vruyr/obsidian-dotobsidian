@@ -56,5 +56,5 @@
   "attachmentFolderPath": "./",
   "propertiesInDocument": "visible",
   "showIndentGuide": true,
-  "newLinkFormat": "absolute"
+  "newLinkFormat": "shortest"
 }
