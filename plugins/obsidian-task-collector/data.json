@@ -55,7 +55,7 @@
       "useContextMenu": false
     }
   },
-  "markCycle": "*/x",
+  "markCycle": "x",
   "markCycleRemoveTask": false,
   "collectionEnabled": false,
   "previewClickModal": true,
