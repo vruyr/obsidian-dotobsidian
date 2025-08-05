@@ -1,7 +1,7 @@
 {
   "ribbonIcon": true,
   "ribbonCommandUsesCode": true,
-  "executeTemplate": "~/.bin/vsc \"{{vaultpath}}\" --goto \"{{vaultpath}}/{{filepath}}:{{line}}:{{ch}}\"",
+  "executeTemplate": "/opt/homebrew/bin/codium \"{{vaultpath}}\" --goto \"{{vaultpath}}/{{filepath}}:{{line}}:{{ch}}\"",
   "openFile": true,
   "workspacePath": "{{vaultpath}}",
   "useUrlInsiders": false
