@@ -12,6 +12,7 @@
   "mobileToolbarCommands": [
     "command-palette:open",
     "editor:context-menu",
+    "templater-obsidian:Templates/Log Entry.md",
     "templater-obsidian:insert-templater",
     "templater-obsidian:jump-to-next-cursor-location",
     "editor:indent-list",
