@@ -59,5 +59,6 @@
   "showIndentGuide": true,
   "newLinkFormat": "shortest",
   "newFileLocation": "folder",
-  "newFileFolderPath": "New"
+  "newFileFolderPath": "New",
+  "uriCallbacks": true
 }
