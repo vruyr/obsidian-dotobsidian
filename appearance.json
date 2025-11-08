@@ -11,7 +11,9 @@
 		"Tasks",
 		"Theme"
 	],
+	"monospaceFontFamily": "DejaVu Sans Mono,Menlo,Monaco,Consolas",
 	"nativeMenus": true,
 	"showRibbon": false,
+	"textFontFamily": "DejaVu Sans,Verdana",
 	"theme": "system"
 }
