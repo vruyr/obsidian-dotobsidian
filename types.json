@@ -5,6 +5,8 @@
     "tags": "tags",
     "timecreated": "datetime",
     "added": "datetime",
-    "excludePeopleFromUnresolvedLinksList": "checkbox"
+    "excludePeopleFromUnresolvedLinksList": "checkbox",
+    "showAllTasks": "checkbox",
+    "lastUpdated": "datetime"
   }
 }
