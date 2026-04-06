@@ -7,6 +7,7 @@
     "added": "datetime",
     "excludePeopleFromUnresolvedLinksList": "checkbox",
     "showAllTasks": "checkbox",
-    "lastUpdated": "datetime"
+    "lastUpdated": "datetime",
+    "timeupdated": "datetime"
   }
 }
