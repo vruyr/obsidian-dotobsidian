@@ -1,0 +1,4 @@
+[filter "appearance"]
+	clean = "jq --tab --sort-keys 'setpath([\"theme\"]; \"system\")'"
+	smudge = cat
+	required = true

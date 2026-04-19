@@ -1,3 +1,2 @@
-# git config filter.appearance.clean 'jq --tab --sort-keys '\''setpath(["theme"]; "system")'\'
-# git config filter.appearance.smudge cat
+# git config set --local --append include.path "$(git rev-parse --show-toplevel)/.gitconfig"
 appearance.json filter=appearance
