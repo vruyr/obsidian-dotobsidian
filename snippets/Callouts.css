@@ -113,6 +113,11 @@ body:not(.\9) {
 }
 
 
+.callout[data-callout="tweet"] {
+	--callout-icon: lucide-bird;
+}
+
+
 .callout[data-callout="ai"] {
 	--callout-icon: lucide-brain-circuit;
 }
